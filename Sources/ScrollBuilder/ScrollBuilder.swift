@@ -38,8 +38,7 @@ struct ScrollBuilder {
             scrollView.bottomAnchor.constraint(equalTo: attachingSuperView.bottomAnchor, constant: -padding).isActive = true
         }
         if useDebugColor {
-            contentView.backgroundColor = UIColor.random.alpha(0.2)
-            contentView.backgroundColor = UIColor.black.alpha(0.1)
+            contentView.backgroundColor = UIColor.green.alpha(0.2)
             scrollView.backgroundColor = UIColor.blue.withAlphaComponent(0.1)
         }
     }
