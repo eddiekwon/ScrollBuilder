@@ -11,9 +11,9 @@ import Foundation
 #if os(iOS) || os(tvOS)
 import UIKit
 
-private extension ViewController {
+public extension UIViewController {
     
-    func setupDebug(to destView: UIView, label: UILabel) {
+    public func setupDebug(to destView: UIView, label: UILabel) {
         destView.addSubview(label)
         label.autoEdgeLayout(top: 100, left: 0)
         label.textColor = .red
@@ -22,7 +22,7 @@ private extension ViewController {
         
     }
     
-    func addScaleLabel(to destView: UIView, label: UILabel) {
+    public func addScaleLabel(to destView: UIView, label: UILabel) {
         destView.addSubview(label)
         label.autoEdgeLayout(bottom: 50, left: 0)
         label.textColor = .red
@@ -30,8 +30,8 @@ private extension ViewController {
     }
 }
 
-extension UIView {
-    func autoEdgeLayout(top: CGFloat, left: CGFloat) {
+public extension UIView {
+    public func autoEdgeLayout(top: CGFloat, left: CGFloat) {
         guard let superView = self.superview else {
             assert(false, "add to superview first")
         }
@@ -45,7 +45,7 @@ extension UIView {
         NSLayoutConstraint.activate(edges)
     }
     
-    func autoEdgeLayout(bottom: CGFloat, left: CGFloat) {
+    public func autoEdgeLayout(bottom: CGFloat, left: CGFloat) {
         guard let superView = self.superview else {
             assert(false, "add to superview first")
         }
