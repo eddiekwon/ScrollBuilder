@@ -6,11 +6,11 @@ import UIKit
 //import AppKit
 #endif
 
-struct ScrollBuilder {
+public struct ScrollBuilder {
     var text = "Hello, World!"
     
     #if !os(macOS)
-    static func attachPinchScrollView(in attachingSuperView: UIView, scrollView: UIScrollView, contentView: UIView ,maxWidth: CGFloat = 4000, useDebugColor: Bool = false) {
+    public static func attachPinchScrollView(in attachingSuperView: UIView, scrollView: UIScrollView, contentView: UIView ,maxWidth: CGFloat = 4000, useDebugColor: Bool = false) {
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
